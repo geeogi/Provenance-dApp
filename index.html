@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" type="text/css" href="hash.css">
+
+<head>
+  <title>Provenance DApp</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+</head>
+<body class="container">
+
+<div id="main">
+
+  <h1>Provenance DApp</h1>
+
+
+
+  <div> This dApp enables you to secure the provenance of a document by storing a hash (like a fingerprint) of your document on the blockchain. In future, you can prove that the document hasn't been changed or tampered with by generating a hash and comparing that with the hash stored on the blockchain. You could use this dApp to prove that you created something at a particular time (e.g. copyright/patent) or to prove that a reference hasn't been altered.</div> 
+
+  <br></br>
+
+  <div>Enter your data. Generate the hash. Then click Store Hash and confirm the transaction with your Web3 provider. This hash is now stored on the blockchain. Make a note of the Tx Id.</div>
+
+  <br></br>
+  
+ <div> <input type="text" id="data1" placeholder="My document..." />
+  <a href="#" onclick="MakeHash()" class="btn btn-primary">Get Hash</a>
+  <a href="#" onclick="StoreHash()" class="btn btn-primary">Store Hash</a>
+</div>
+
+<div id="hashdisplay"></div>
+<div id="txdisplay"></div>
+
+<br></br>
+
+<h1>Check Tool</h1>
+
+
+<div>Enter your TX Id. This tool will tell you the hash stored by that Tx and the date. Optional: input your data to confirm that it was hashed in this Tx.</div>
+
+<br></br>
+
+<div><input type="text" id="tx" placeholder="0x00000..."/>
+<div> <input type="text" id="data4" placeholder="My document..."/></div>
+<a href="#" onclick="RetrieveHash()" class="btn btn-primary">Check</a>
+</div>
+
+<div id="datadisplay"></div>
+<div id="datadisplay2"></div>
+<div id="datadisplay3"></div>
+
+<br></br>
+
+</div>
+
+</body>
+<script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script src="hash.js"></script>
+</html>
